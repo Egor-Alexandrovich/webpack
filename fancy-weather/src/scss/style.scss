@@ -1,0 +1,193 @@
+
+html {
+    font-size: 16px;
+  }
+.container {
+    max-width: 1440px;
+    min-height: 600px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    //background: url(../assets/images/bg.jpg) 0 0 no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    color:#fff;
+}
+.control-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+.city {
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 54px;
+    text-transform: uppercase;
+}
+.current-date {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+.current-weather {
+    display: flex;
+    margin-bottom: 10px;
+}
+.weather {
+    position: relative;
+   & p {
+    font-weight: bold;
+    font-size: 19rem;
+    line-height: 23rem;
+    text-transform: uppercase;
+    & span {
+        font-size: 100px;
+        vertical-align: top;
+        line-height: 2;
+        z-index: 2;
+        position: relative;
+    }
+   }
+}
+.weather-icon {
+    position: absolute;
+    top: 5px;
+    right: -140px;
+    z-index: 1;
+    & img {
+        max-width: 165px;
+    }
+}
+.weather-wrapper {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 2.315rem;
+    text-transform: uppercase;
+}
+.week-weather {
+    display: flex;
+    justify-content: space-around;
+}
+.day-hading {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.375rem;
+    line-height: 27px;
+}
+.day-icon {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+.day-weather {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 98px;
+    text-transform: uppercase;
+}
+.input-wrapper {
+    margin: 0 auto 10px;
+    max-width: 320px;
+    display: flex;
+}
+.input-city {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: 1px solid #555;
+    cursor: pointer;
+    &::placeholder {
+        color: #fff;
+    }
+}
+.map {
+    max-width: 375px;
+    min-height: 300px;
+    margin: 0 auto 10px;
+}
+.latitude {
+    margin: 0 auto;
+    max-width: 320px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    text-transform: capitalize;
+}
+.longitude {
+    margin: 0 auto;
+    max-width: 320px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    text-transform: capitalize;
+}
+.btn-load2 {
+    background: url(../assets/images/refresh.svg) 0 0 no-repeat;
+    background: url(../assets/images/weather2.svg) 0 0 no-repeat;
+    background: url(../assets/images/weather1.png) 0 0 no-repeat;
+    background: url(../assets/images/clear-day.png) 0 0 no-repeat;
+    background: url(../assets/images/clear-night.png) 0 0 no-repeat;
+    background: url(../assets/images/cloudy.png) 0 0 no-repeat;
+    background: url(../assets/images/partly-cloudy-day.png) 0 0 no-repeat;
+    background: url(../assets/images/partly-cloudy-night.png) 0 0 no-repeat;
+    background: url(../assets/images/fog.png) 0 0 no-repeat;
+    background: url(../assets/images/rain.png) 0 0 no-repeat;
+    background: url(../assets/images/sleet.png) 0 0 no-repeat;
+    background: url(../assets/images/snow.png) 0 0 no-repeat;
+    background: url(../assets/images/wind.png) 0 0 no-repeat;
+}
+.btn-load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5px 10px;
+    background: #aeb5b9;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #000;
+    border-radius: 5px;
+    border: 1px solid #7c7d7e;
+    color: #fff;
+    cursor: pointer;
+    &:active {
+        top: .1em;
+        left: .1em;
+        box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+    }
+    &.active {
+        background-color: #4c5255;
+        color: rgba(255, 255, 255, 0.4);
+    }
+}
+/*====================== Media =====================*/
+@media (max-width: 920px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .wrapper {
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    html {
+        font-size: 10px;
+      }
+}
+@media (max-width: 420px) {
+    .weather-icon {
+        right: -40px;
+        & img {
+            width: 68px;
+            height: 46px;
+        }
+    }
+    html {
+        font-size: 9px;
+    }
+    .weather p {
+        font-size: 13.25rem;
+    }
+}
